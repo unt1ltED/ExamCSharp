@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ExamCSharp
 {
-    public partial class MainPage : Form
+    public partial class PlansPage : Form
     {
-        public MainPage()
+        public PlansPage()
         {
             InitializeComponent();
         }

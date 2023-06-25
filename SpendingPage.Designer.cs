@@ -1,6 +1,6 @@
 ﻿namespace ExamCSharp
 {
-    partial class EarningPage
+    partial class SpendingPage
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             SuspendLayout();
             // 
-            // EarningPage
+            // SpendingPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 574);
-            Name = "EarningPage";
-            Text = "EarningPage";
+            ClientSize = new Size(800, 531);
+            Name = "SpendingPage";
+            Text = "SpendingPage";
             ResumeLayout(false);
         }
 

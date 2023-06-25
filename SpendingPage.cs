@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LiveCharts; //Core of the library
+using LiveCharts.Wpf; //The WPF controls
+using LiveCharts.WinForms; //the WinForm wrappers
 
 namespace ExamCSharp
 {
-    public partial class MainPage : Form
+    public partial class SpendingPage : Form
     {
-        public MainPage()
+        public SpendingPage()
         {
             InitializeComponent();
         }

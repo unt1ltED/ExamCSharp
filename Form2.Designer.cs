@@ -1,6 +1,6 @@
 ﻿namespace ExamCSharp
 {
-    partial class Form2
+    partial class MainPage
     {
         /// <summary>
         /// Required designer variable.
@@ -30,34 +30,45 @@
         {
             bSpendingPage = new Button();
             bEarningPage = new Button();
+            bPlansPage = new Button();
             SuspendLayout();
             // 
             // bSpendingPage
             // 
-            bSpendingPage.Location = new Point(127, 236);
+            bSpendingPage.Location = new Point(71, 236);
             bSpendingPage.Name = "bSpendingPage";
             bSpendingPage.Size = new Size(169, 95);
             bSpendingPage.TabIndex = 0;
-            bSpendingPage.Text = "button1";
+            bSpendingPage.Text = "SpendingPage";
             bSpendingPage.UseVisualStyleBackColor = true;
             // 
             // bEarningPage
             // 
-            bEarningPage.Location = new Point(370, 236);
+            bEarningPage.Location = new Point(436, 236);
             bEarningPage.Name = "bEarningPage";
             bEarningPage.Size = new Size(169, 95);
             bEarningPage.TabIndex = 1;
-            bEarningPage.Text = "button2";
+            bEarningPage.Text = "EarningPage";
             bEarningPage.UseVisualStyleBackColor = true;
             // 
-            // Form2
+            // bPlansPage
+            // 
+            bPlansPage.Location = new Point(254, 343);
+            bPlansPage.Name = "bPlansPage";
+            bPlansPage.Size = new Size(169, 95);
+            bPlansPage.TabIndex = 2;
+            bPlansPage.Text = "PlansPage";
+            bPlansPage.UseVisualStyleBackColor = true;
+            // 
+            // MainPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(680, 450);
+            Controls.Add(bPlansPage);
             Controls.Add(bEarningPage);
             Controls.Add(bSpendingPage);
-            Name = "Form2";
+            Name = "MainPage";
             Text = "Form2";
             ResumeLayout(false);
         }
@@ -66,5 +77,6 @@
 
         private Button bSpendingPage;
         private Button bEarningPage;
+        private Button bPlansPage;
     }
 }
