@@ -1,6 +1,6 @@
-﻿namespace ExamCSharp
+﻿namespace praktik_21._06._2023
 {
-    partial class Form1
+    partial class sign_up
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,106 +28,160 @@
         /// </summary>
         private void InitializeComponent()
         {
-            bLogin = new Button();
-            bSignup = new Button();
-            tbPassword = new TextBox();
-            tbLogin = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();
-            // 
-            // bLogin
-            // 
-            bLogin.Location = new Point(36, 292);
-            bLogin.Name = "bLogin";
-            bLogin.Size = new Size(119, 59);
-            bLogin.TabIndex = 0;
-            bLogin.Text = "Log in";
-            bLogin.UseVisualStyleBackColor = true;
-            bLogin.Click += bLogin_Click;
-            // 
-            // bSignup
-            // 
-            bSignup.Location = new Point(212, 292);
-            bSignup.Name = "bSignup";
-            bSignup.Size = new Size(119, 59);
-            bSignup.TabIndex = 1;
-            bSignup.Text = "Sign up";
-            bSignup.UseVisualStyleBackColor = true;
-            // 
-            // tbPassword
-            // 
-            tbPassword.Location = new Point(36, 224);
-            tbPassword.Name = "tbPassword";
-            tbPassword.Size = new Size(295, 23);
-            tbPassword.TabIndex = 2;
-            // 
-            // tbLogin
-            // 
-            tbLogin.Location = new Point(36, 150);
-            tbLogin.Name = "tbLogin";
-            tbLogin.Size = new Size(295, 23);
-            tbLogin.TabIndex = 3;
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.signUpButton = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(36, 122);
-            label1.Name = "label1";
-            label1.Size = new Size(112, 25);
-            label1.TabIndex = 4;
-            label1.Text = "Login/Email";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(303, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "username";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(303, 40);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(118, 23);
+            this.textBox1.TabIndex = 1;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(303, 99);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(118, 23);
+            this.textBox2.TabIndex = 3;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(36, 196);
-            label2.Name = "label2";
-            label2.Size = new Size(91, 25);
-            label2.TabIndex = 5;
-            label2.Text = "Password";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(303, 81);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 15);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "password";
             // 
-            // pictureBox1
+            // textBox3
             // 
-            pictureBox1.Location = new Point(134, 28);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 78);
-            pictureBox1.TabIndex = 6;
-            pictureBox1.TabStop = false;
+            this.textBox3.Location = new System.Drawing.Point(303, 165);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(118, 23);
+            this.textBox3.TabIndex = 5;
             // 
-            // Form1
+            // label3
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(371, 405);
-            Controls.Add(pictureBox1);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(tbLogin);
-            Controls.Add(tbPassword);
-            Controls.Add(bSignup);
-            Controls.Add(bLogin);
-            MaximizeBox = false;
-            MinimizeBox = false;
-            Name = "Form1";
-            Text = "BudgetManager";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(303, 140);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 15);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "repeat password";
+            // 
+            // signUpButton
+            // 
+            this.signUpButton.Location = new System.Drawing.Point(303, 206);
+            this.signUpButton.Name = "signUpButton";
+            this.signUpButton.Size = new System.Drawing.Size(75, 23);
+            this.signUpButton.TabIndex = 6;
+            this.signUpButton.Text = "sign up";
+            this.signUpButton.UseVisualStyleBackColor = true;
+            this.signUpButton.Click += new System.EventHandler(this.signUpButton_Click);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(384, 210);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(37, 15);
+            this.linkLabel1.TabIndex = 10;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "log in";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.Tomato;
+            this.label6.Location = new System.Drawing.Point(306, 66);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(30, 12);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "label6";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.Tomato;
+            this.label4.Location = new System.Drawing.Point(303, 125);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(30, 12);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "label4";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.Tomato;
+            this.label7.Location = new System.Drawing.Point(303, 191);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(30, 12);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "label7";
+            // 
+            // sign_up
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.signUpButton);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
+            this.Name = "sign_up";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.sign_up_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
-        private Button bLogin;
-        private Button bSignup;
-        private TextBox tbPassword;
-        private TextBox tbLogin;
         private Label label1;
+        private TextBox textBox1;
+        private TextBox textBox2;
         private Label label2;
-        private PictureBox pictureBox1;
+        private TextBox textBox3;
+        private Label label3;
+        private Button signUpButton;
+        private Label label4;
+        private TextBox textBox4;
+        private Button button1;
+        private LinkLabel linkLabel1;
+        private Label label6;
+        private Label label7;
     }
 }
