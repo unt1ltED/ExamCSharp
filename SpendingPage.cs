@@ -28,9 +28,10 @@ namespace ExamCSharp
 
         private void CartChart()
         {
-            if (File.Exists(@"UserName\" + dtpMonthYear.Value.Year + @"\" + dtpMonthYear.Value.Month + @"\" + cbCategory.Text + @".json"))
+
+            if (File.Exists(@"UserName\" + dtpMonthYear.Value.Year + @"\" + dtpMonthYear.Value.Month + @"\" + cbCategory.Text + @".json")) //Заменить UserName на переменную "Login"
             {
-                List<Spending> charts = JsonConvert.DeserializeObject<List<Spending>>(File.ReadAllText(@"UserName\" + dtpMonthYear.Value.Year + @"\" + dtpMonthYear.Value.Month + @"\" + cbCategory.Text + @".json"));
+                List<Spending> charts = JsonConvert.DeserializeObject<List<Spending>>(File.ReadAllText(@"UserName\" + dtpMonthYear.Value.Year + @"\" + dtpMonthYear.Value.Month + @"\" + cbCategory.Text + @".json")); //Заменить UserName на переменную "Login"
                 List<double> t = new List<double>();
                 List<string> t2 = new List<string>();
                 List<string> t3 = new List<string>();
@@ -68,7 +69,7 @@ namespace ExamCSharp
             {
                 MessageBox.Show("Error!");
             }
-            
+
 
         }
 
@@ -82,6 +83,12 @@ namespace ExamCSharp
         {
             AddSpendingForm add = new AddSpendingForm();
             add.Show();
+        }
+
+        private void SpendingPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
         }
     }
 }

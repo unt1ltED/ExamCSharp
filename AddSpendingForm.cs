@@ -17,7 +17,6 @@ namespace ExamCSharp
         string Title;
         double Amount;
         string Category;
-        int Day;
         int Month;
         int Year;
         string Date;
@@ -36,7 +35,6 @@ namespace ExamCSharp
                 Title = tbTitle.Text.ToString();
                 Amount = Double.Parse(tbAmount.Text.ToString());
                 Category = cbCategory.Text.ToString();
-                Day = dtpDate.Value.Day;
                 Month = dtpDate.Value.Month;
                 Year = dtpDate.Value.Year;
                 Date = dtpDate.Value.ToShortDateString();
@@ -45,21 +43,21 @@ namespace ExamCSharp
                 Spending(Title, Amount, Category, Date);
             }
 
-            else 
+            else
             {
                 MessageBox.Show("Error! Invalid data type of Amount");
             }
         }
 
-        public void Spending(string ti,double a, string c, string d) 
+        public void Spending(string ti, double a, string c, string d)
         {
-            if (!Directory.Exists(@"UserName\" + Year + @"\" + Month))
+            if (!Directory.Exists(@"UserName\" + Year + @"\" + Month))//Заменить UserName на переменную "Login"
             {
-                Directory.CreateDirectory(@"UserName\" + Year + @"\" + Month);
-                if (!File.Exists(@"UserName\" + Year + @"\" + Month + @"\" + c + @".json"))
+                Directory.CreateDirectory(@"UserName\" + Year + @"\" + Month);//Заменить UserName на переменную "Login"
+                if (!File.Exists(@"UserName\" + Year + @"\" + Month + @"\" + c + @".json"))//Заменить UserName на переменную "Login"
                 {
                     List<Spending> t = new List<Spending>();
-                    File.Create(@"UserName\" + Year + @"\" + Month + @"\" + c + @".json");
+                    File.Create(@"UserName\" + Year + @"\" + Month + @"\" + c + @".json");//Заменить UserName на переменную "Login"
                     Spending addSpending = new Spending()
                     {
                         Title = ti,
@@ -73,18 +71,17 @@ namespace ExamCSharp
                     File.WriteAllText(@"UserName\" + Year + @"\" + Month + @"\" + c + @".json", JsonConvert.SerializeObject(t, Formatting.Indented,
 new JsonSerializerSettings
 {
-ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-}));
+    ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+}));//Заменить UserName на переменную "Login"
 
 
                 }
             }
             else
             {
-                if (!File.Exists(@"UserName\" + Year + @"\" + Month + @"\" + c + @".json"))
+                if (!File.Exists(@"UserName\" + Year + @"\" + Month + @"\" + c + @".json"))//Заменить UserName на переменную "Login"
                 {
                     List<Spending> t = new List<Spending>();
-                    //File.Create(@"UserName\" + Year + @"\" + Month + @"\" + c + @".json");
 
                     Spending addSpending = new Spending()
                     {
@@ -99,13 +96,13 @@ ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
                     File.WriteAllText(@"UserName\" + Year + @"\" + Month + @"\" + c + @".json", JsonConvert.SerializeObject(t, Formatting.Indented,
 new JsonSerializerSettings
 {
-ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-}));
+    ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+}));//Заменить UserName на переменную "Login"
 
                 }
                 else
                 {
-                    List<Spending> add = JsonConvert.DeserializeObject<List<Spending>>(File.ReadAllText(@"UserName\" + Year + @"\" + Month + @"\" + c + @".json"));
+                    List<Spending> add = JsonConvert.DeserializeObject<List<Spending>>(File.ReadAllText(@"UserName\" + Year + @"\" + Month + @"\" + c + @".json"));//Заменить UserName на переменную "Login"
                     Spending addSpending = new Spending()
                     {
                         Title = ti,
@@ -118,11 +115,12 @@ ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
                     File.WriteAllText(@"UserName\" + Year + @"\" + Month + @"\" + c + @".json", JsonConvert.SerializeObject(add, Formatting.Indented,
 new JsonSerializerSettings
 {
-ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-}));
+    ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+}));//Заменить UserName на переменную "Login"
 
                 }
             }
+            MessageBox.Show("Added");
             this.Close();
 
         }

@@ -15,6 +15,27 @@ namespace ExamCSharp
         public MainPage()
         {
             InitializeComponent();
+
+        }
+
+        private void bSpendingPage_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            SpendingPage form = new SpendingPage();
+            form.Show();
+        }
+
+        private void MainPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Form1 form = new Form1();
+            form.Visible = true;
+        }
+
+        private void bExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form1 form = new Form1();
+            form.Visible = true;
         }
     }
 }

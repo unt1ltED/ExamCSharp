@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             bSpendingPage = new Button();
             bEarningPage = new Button();
             bPlansPage = new Button();
             label1 = new Label();
             label2 = new Label();
+            bExit = new Button();
             SuspendLayout();
             // 
             // bSpendingPage
@@ -43,6 +45,7 @@
             bSpendingPage.TabIndex = 0;
             bSpendingPage.Text = "SpendingPage";
             bSpendingPage.UseVisualStyleBackColor = true;
+            bSpendingPage.Click += bSpendingPage_Click;
             // 
             // bEarningPage
             // 
@@ -82,18 +85,33 @@
             label2.TabIndex = 4;
             label2.Text = "Pick the page you want";
             // 
+            // bExit
+            // 
+            bExit.Location = new Point(530, 384);
+            bExit.Name = "bExit";
+            bExit.Size = new Size(138, 54);
+            bExit.TabIndex = 5;
+            bExit.Text = "Exit";
+            bExit.UseVisualStyleBackColor = true;
+            bExit.Click += bExit_Click;
+            // 
             // MainPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlDark;
             ClientSize = new Size(680, 450);
+            Controls.Add(bExit);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(bPlansPage);
             Controls.Add(bEarningPage);
             Controls.Add(bSpendingPage);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainPage";
-            Text = "Form2";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Menu";
+            FormClosing += MainPage_FormClosing;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -105,5 +123,6 @@
         private Button bPlansPage;
         private Label label1;
         private Label label2;
+        private Button bExit;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SpendingPage));
             bSpendingStats = new Button();
             bAddSpending = new Button();
             cartesianChart1 = new LiveChartsCore.SkiaSharpView.WinForms.CartesianChart();
@@ -104,6 +105,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlDark;
             ClientSize = new Size(800, 531);
             Controls.Add(label2);
             Controls.Add(dtpMonthYear);
@@ -112,8 +114,11 @@
             Controls.Add(cartesianChart1);
             Controls.Add(bAddSpending);
             Controls.Add(bSpendingStats);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "SpendingPage";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "SpendingPage";
+            FormClosing += SpendingPage_FormClosing;
             ResumeLayout(false);
             PerformLayout();
         }

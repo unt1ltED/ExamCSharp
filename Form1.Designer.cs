@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             bLogin = new Button();
             bSignup = new Button();
             tbPassword = new TextBox();
@@ -50,12 +51,14 @@
             // 
             // bSignup
             // 
+            bSignup.BackgroundImageLayout = ImageLayout.None;
             bSignup.Location = new Point(212, 292);
             bSignup.Name = "bSignup";
             bSignup.Size = new Size(119, 59);
             bSignup.TabIndex = 1;
             bSignup.Text = "Sign up";
             bSignup.UseVisualStyleBackColor = true;
+            bSignup.Click += bSignup_Click;
             // 
             // tbPassword
             // 
@@ -93,9 +96,11 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(134, 28);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(129, 27);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 78);
+            pictureBox1.Size = new Size(110, 92);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
             // 
@@ -103,6 +108,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlDark;
             ClientSize = new Size(371, 405);
             Controls.Add(pictureBox1);
             Controls.Add(label2);
@@ -111,9 +117,11 @@
             Controls.Add(tbPassword);
             Controls.Add(bSignup);
             Controls.Add(bLogin);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "BudgetManager";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
