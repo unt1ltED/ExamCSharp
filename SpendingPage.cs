@@ -1,5 +1,7 @@
-﻿using LiveChartsCore.SkiaSharpView;
-using LiveChartsCore;
+﻿using LiveChartsCore;
+using LiveChartsCore.SkiaSharpView;
+using LiveChartsCore.SkiaSharpView.Painting;
+using SkiaSharp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +11,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using System.IO;
+using LiveChartsCore.Kernel;
+using LiveChartsCore.SkiaSharpView.WinForms;
+using HarfBuzzSharp;
 
 namespace ExamCSharp
 {
@@ -17,38 +24,64 @@ namespace ExamCSharp
         public SpendingPage()
         {
             InitializeComponent();
-            //Form1 form = new Form1();
-            //form.Hide();
-        }
-
-        private void PieChart()
-        {
-            pieChart1.Series = new ISeries[]
-            {
-                new PieSeries<double> { Values = new double[] { 2 } },
-                new PieSeries<double> { Values = new double[] { 4 } },
-                new PieSeries<double> { Values = new double[] { 1 } },
-                new PieSeries<double> { Values = new double[] { 4 } },
-                new PieSeries<double> { Values = new double[] { 3 } }
-            };
         }
 
         private void CartChart()
         {
-            cartesianChart1.Series = new ISeries[]
+            if (File.Exists(@"UserName\" + dtpMonthYear.Value.Year + @"\" + dtpMonthYear.Value.Month + @"\" + cbCategory.Text + @".json"))
             {
-                new LineSeries<double>
+                List<Spending> charts = JsonConvert.DeserializeObject<List<Spending>>(File.ReadAllText(@"UserName\" + dtpMonthYear.Value.Year + @"\" + dtpMonthYear.Value.Month + @"\" + cbCategory.Text + @".json"));
+                List<double> t = new List<double>();
+                List<string> t2 = new List<string>();
+                List<string> t3 = new List<string>();
+                foreach (var item in charts)
                 {
-                    Values = new double[] { 2, 1, 3, 5, 3, 4, 6 },
-                    Fill = null
+                    t.Add(item.Amount);
+                    t2.Add(item.Date);
+                    t3.Add(item.Title);
+                };
+
+                cartesianChart1.Series = new ISeries[]
+                {
+                new ColumnSeries<double>
+                {
+                    Values = t,
+
                 }
-            };
+                };
+
+                cartesianChart1.XAxes = new Axis[]
+                {
+                new Axis
+                {
+                    Labels = t2,
+                    NamePaint = new SolidColorPaint(SKColors.Black),
+
+                    LabelsPaint = new SolidColorPaint(SKColors.Blue),
+                    TextSize = 12,
+
+                    SeparatorsPaint = new SolidColorPaint(SKColors.LightSlateGray) { StrokeThickness = 2 }
+                }
+                };
+            }
+            else
+            {
+                MessageBox.Show("Error!");
+            }
+            
+
         }
+
 
         private void bSpendingStats_Click(object sender, EventArgs e)
         {
-            PieChart();
             CartChart();
+        }
+
+        private void bAddSpending_Click(object sender, EventArgs e)
+        {
+            AddSpendingForm add = new AddSpendingForm();
+            add.Show();
         }
     }
 }
