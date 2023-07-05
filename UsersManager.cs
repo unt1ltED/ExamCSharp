@@ -7,11 +7,11 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace praktik_21._06._2023
+namespace ExamCSharp
 {
     internal class UsersManager
     {
-        public List<User> Users { get; }
+        public List<User> Users { get; set; }
 
         public UsersManager()
         {

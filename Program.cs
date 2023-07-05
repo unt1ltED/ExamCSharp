@@ -13,7 +13,7 @@ namespace ExamCSharp
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new sign_up());
+            Application.Run(new earnings("bebra"));
         }
     }
 }

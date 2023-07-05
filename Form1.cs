@@ -1,5 +1,6 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using ExamCSharp;
 
 namespace praktik_21._06._2023
 {
@@ -8,6 +9,7 @@ namespace praktik_21._06._2023
         private string captcha;
         private UsersManager usersManager;
         private string filePath;
+        
         //public UsersManager UserosManager { get;  }
         public sign_up()
         {
@@ -16,12 +18,14 @@ namespace praktik_21._06._2023
             usersManager = new UsersManager();
 
             filePath = "users.json";
-            if (File.Exists(filePath)) {
+            if (File.Exists(filePath))
+            {
                 using (FileStream f = new FileStream(filePath, FileMode.Open))
                 {
                     usersManager = JsonSerializer.Deserialize<UsersManager>(f);
                 }
             }
+            else linkLabel1.Hide();
 
             label6.Text = "";
             label4.Text = "";
@@ -40,6 +44,7 @@ namespace praktik_21._06._2023
                         textBox1.Text = "";
                         label6.Text = "3 - 20 symbols length and unique";
                     }
+
                     else
                     {
                         label6.Text = "";
@@ -120,6 +125,8 @@ namespace praktik_21._06._2023
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            
+
             Form log_in = new log_in();
             log_in.Show();
             this.Hide();

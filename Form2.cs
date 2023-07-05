@@ -12,9 +12,18 @@ namespace ExamCSharp
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        private string username;
+        public Form2(string username)
         {
             InitializeComponent();
+            this.username = username;
+        }
+
+        private void bEarningPage_Click(object sender, EventArgs e)
+        {
+            Form earnings = new earnings(username);
+            earnings.Show();
+            this.Hide();
         }
     }
 }

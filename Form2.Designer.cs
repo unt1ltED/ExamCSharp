@@ -28,62 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            bPlansPage = new Button();
-            bEarningPage = new Button();
-            bSpendingPage = new Button();
-            label1 = new Label();
-            SuspendLayout();
+            this.bPlansPage = new System.Windows.Forms.Button();
+            this.bEarningPage = new System.Windows.Forms.Button();
+            this.bSpendingPage = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
             // 
             // bPlansPage
             // 
-            bPlansPage.Location = new Point(35, 207);
-            bPlansPage.Name = "bPlansPage";
-            bPlansPage.Size = new Size(169, 95);
-            bPlansPage.TabIndex = 5;
-            bPlansPage.Text = "PlansPage";
-            bPlansPage.UseVisualStyleBackColor = true;
+            this.bPlansPage.Location = new System.Drawing.Point(35, 207);
+            this.bPlansPage.Name = "bPlansPage";
+            this.bPlansPage.Size = new System.Drawing.Size(169, 95);
+            this.bPlansPage.TabIndex = 5;
+            this.bPlansPage.Text = "PlansPage";
+            this.bPlansPage.UseVisualStyleBackColor = true;
             // 
             // bEarningPage
             // 
-            bEarningPage.Location = new Point(35, 334);
-            bEarningPage.Name = "bEarningPage";
-            bEarningPage.Size = new Size(169, 95);
-            bEarningPage.TabIndex = 4;
-            bEarningPage.Text = "EarningPage";
-            bEarningPage.UseVisualStyleBackColor = true;
+            this.bEarningPage.Location = new System.Drawing.Point(35, 334);
+            this.bEarningPage.Name = "bEarningPage";
+            this.bEarningPage.Size = new System.Drawing.Size(169, 95);
+            this.bEarningPage.TabIndex = 4;
+            this.bEarningPage.Text = "EarningPage";
+            this.bEarningPage.UseVisualStyleBackColor = true;
+            this.bEarningPage.Click += new System.EventHandler(this.bEarningPage_Click);
             // 
             // bSpendingPage
             // 
-            bSpendingPage.Location = new Point(35, 78);
-            bSpendingPage.Name = "bSpendingPage";
-            bSpendingPage.Size = new Size(169, 95);
-            bSpendingPage.TabIndex = 3;
-            bSpendingPage.Text = "SpendingPage";
-            bSpendingPage.UseVisualStyleBackColor = true;
+            this.bSpendingPage.Location = new System.Drawing.Point(35, 78);
+            this.bSpendingPage.Name = "bSpendingPage";
+            this.bSpendingPage.Size = new System.Drawing.Size(169, 95);
+            this.bSpendingPage.TabIndex = 3;
+            this.bSpendingPage.Text = "SpendingPage";
+            this.bSpendingPage.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(463, 110);
-            label1.Name = "label1";
-            label1.Size = new Size(100, 25);
-            label1.TabIndex = 6;
-            label1.Text = "UserName";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(463, 110);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 25);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "UserName";
             // 
             // Form2
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(680, 450);
-            Controls.Add(label1);
-            Controls.Add(bPlansPage);
-            Controls.Add(bEarningPage);
-            Controls.Add(bSpendingPage);
-            Name = "Form2";
-            Text = "Form2";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(680, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.bPlansPage);
+            this.Controls.Add(this.bEarningPage);
+            this.Controls.Add(this.bSpendingPage);
+            this.Name = "Form2";
+            this.Text = "Form2";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
